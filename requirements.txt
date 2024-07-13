@@ -1,0 +1,40 @@
+1. Arduino IDE'yi İndirin ve Kurun Eğer Arduino IDE yüklü değilse, Arduino IDE'nin resmi web sitesinden en son sürümünü indirip kurun.
+
+2. ATtiny85 İçin Board Manager Ayarlarını YapınArduino IDE'yi açın ve ATtiny85 desteğini eklemek için şu adımları izleyin:
+Arduino IDE'yi AçınFile > Preferences menüsüne gidin."Additional Board Manager URLs" alanına aşağıdaki URL'yi ekleyin:https://raw.githubusercontent.com/damellis/attiny/ide-1.6.x-boards-manager/package_damellis_attiny_index.json 
+Eğer zaten başka URL'ler ekliyse, URL'leri virgül ile ayırabilirsiniz.
+OK butonuna tıklayın.
+
+3. ATtiny85 Kartını Yükleyin Board Manager'ı kullanarak ATtiny85 desteğini ekleyin:
+Tools > Board > Boards Manager menüsüne gidin.
+Açılan pencerede arama kutusuna "attiny" yazın.
+"attiny by David A. Mellis" kartını bulun ve Install butonuna tıklayın.
+
+4. Gerekli Kütüphaneleri YükleyinATtiny85'inizi bir USB HID cihazı olarak kullanmak için gerekli kütüphaneyi yükleyin:
+Tools > Manage Libraries menüsüne gidin.
+Arama kutusuna "Digispark" yazın.
+"DigisparkArduinoIntegration" kütüphanesini bulun ve Install butonuna tıklayın.
+
+5. ATtiny85 Kartını SeçinATtiny85 kartınızı seçmek için şu adımları izleyin:
+Tools > Board menüsüne gidin ve ATtiny kartını seçin.
+Tools > Processor menüsüne gidin ve ATtiny85'i seçin.
+Tools > Clock menüsüne gidin ve 8 MHz (Internal) seçeneğini seçin.
+Tools > Programmer menüsüne gidin ve Arduino as ISP seçeneğini seçin.
+
+6. Örnek Kodu Yükleyin Yukarıda verdiğimiz örnek kodu kullanarak ATtiny85'inize yükleyebilirsiniz.
+ATtiny85'i Arduino IDE ile programlamak için aşağıdaki adımları izleyin:
+Arduino IDE'yi açın.
+Yeni bir proje oluşturun veya mevcut bir projeyi açın.
+Yukarıda verilen örnek kodu kopyalayıp Arduino IDE'ye yapıştırın.
+ATtiny85'i programlamak için bir USBasp programlayıcı veya başka bir Arduino kullanarak bağlantı yapın.
+Tools > Port menüsünden doğru portu seçin.Tools > Burn Bootloader seçeneği ile ATtiny85'e bootloader yükleyin (eğer daha önce yüklenmemişse).
+Sketch > Upload Using Programmer seçeneği ile kodunuzu ATtiny85'e yükleyin.
+
+  _____ _ _                   _           _                 
+ / ____(_) |                 (_)         | |                
+| (___  _| |__   ___ _ __ ___ _  __ _  __| | __ _ _ __ ___  
+ \___ \| | '_ \ / _ \ '__/ __| |/ _` |/ _` |/ _` | '_ ` _ \ 
+ ____) | | |_) |  __/ | | (__| | (_| | (_| | (_| | | | | | |
+|_____/|_|_.__/ \___|_|  \___|_|\__,_|\__,_|\__,_|_| |_| |_|
+                                                            
+                                                            
